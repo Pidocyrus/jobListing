@@ -40,11 +40,15 @@ Route::post('/listings', [ListingController::class, 'store']);
 //Show Edit Route
 Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
 
-//Edit Submit To Update
-Route::put('/listings/{listing}');
+//Update Listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+//Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+
 
 //Single Listing
-Route::get('/listings/{listing}',[ListingController::class, 'show']);
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 
