@@ -10,7 +10,7 @@
     <div class="flex flex-col items-center justify-center text-center">
         <img
             class="w-48 mr-6 mb-6"
-            src="{{ asset('images/no-image.png') }}"
+            src="{{$listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png')}}"
             alt=""
         />
 
@@ -46,6 +46,14 @@
         </div>
     </div>
 </x-card>
+
+<x-card class="mt-4 p-2 flex space-x-6">
+<a href="/listings/{{$listing->id}}/edit">
+    <i class="fa-solid fa-pencil"></i> Edit
+</a>
+
+</x-card>
+
 </div>
 
 </x-layout>

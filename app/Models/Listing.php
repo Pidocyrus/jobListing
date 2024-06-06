@@ -24,6 +24,6 @@ class Listing extends Model
     }
 
     }
-    
+
 }
 
